@@ -1,0 +1,58 @@
+:root{
+    --black-color: #000;
+    --white-color: #ffffff;
+    --purple-color: #600148;
+    --lightpurple-color: #800160dc;
+    --blue-color: #006568;
+    --lightblue-color: #03888d;
+    --grey-color: #7D7E80;
+    --background-color: #0A0C10;
+}
+
+.message-container{
+    background-color: var(--white-color);
+    border-radius: 8px;
+    border: 1px solid var(--purple-color);
+    padding: 20px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.message-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.btn-link{
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.message-content{
+    font-size: 20px;
+}
+
+.message-likes{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.message-likes span{
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.new-message{
+    color: var(--white-color);
+}

@@ -1,0 +1,103 @@
+:root{
+    --black-color: #000;
+    --white-color: #ffffff;
+    --purple-color: #600148;
+    --lightpurple-color: #800160dc;
+    --blue-color: #006568;
+    --lightblue-color: #03888d;
+    --grey-color: #7D7E80;
+    --background-color: #0A0C10;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.connexion-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.connexion-form{
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 100%;
+    z-index: 3;
+    overflow-y: auto;
+}
+
+.connexion-form h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.connexion-form .form-control,
+.connexion-form .form-check{
+    margin-bottom: 15px;
+}
+
+.connexion-form .text-center{
+    margin-top: 15px;
+}
+
+.connexion-form .text-center a{
+    color: var(--blue-color);
+    text-decoration: none;
+}
+
+.connexion-form .text-center a:hover{
+    text-decoration: underline;
+}
+
+.pwd-group .pwd-container{
+    position: relative;
+}
+
+.pwd-group .pwd-container .show-password-btn{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    font-size: 14px;
+    color: var(--blue-color);
+    margin-top: 1px;
+}
+
+.pwd-group .pwd-container .show-password-btn:hover{
+    text-decoration: underline;
+}
+
+.form-check-input{
+    border: 1px solid var(--blue-color);
+    cursor: pointer;
+}
+
+.connexion-btn{
+    background-color: var(--lightblue-color);
+    border: none;
+    transition: transform .4s;
+    font-size: 20px;
+}
+
+.connexion-btn:active{
+    background-color: var(--blue-color) !important;
+    transform: scale(1.05) !important;
+}
+
+.connexion-btn:hover{
+    background-color: var(--blue-color); 
+    transform: scale(1.05);
+    gap: 20px;
+}
+

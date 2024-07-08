@@ -1,0 +1,38 @@
+:root{
+    --black-color: #000;
+    --white-color: #ffffff;
+    --purple-color: #600148;
+    --lightpurple-color: #800160dc;
+    --blue-color: #006568;
+    --lightblue-color: #03888d;
+    --grey-color: #7D7E80;
+    --background-color: #0A0C10;
+}
+
+.time-span{
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.previous-btn,
+.playpause-btn,
+.next-btn{
+    background-color: var(--lightpurple-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+}
+
+.previous-btn:active,
+.playpause-btn:active,
+.next-btn:active{
+    background-color: var(--purple-color) !important;
+}
+
+.previous-btn:hover,
+.playpause-btn:hover,
+.next-btn:hover{
+    background-color: var(--purple-color); 
+}

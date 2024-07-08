@@ -1,0 +1,124 @@
+:root{
+    --black-color: #000;
+    --white-color: #ffffff;
+    --purple-color: #600148;
+    --lightpurple-color: #800160dc;
+    --blue-color: #006568;
+    --lightblue-color: #03888d;
+    --grey-color: #7D7E80;
+    --background-color: #0A0C10;
+}
+
+.mission-page {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 43px;
+    box-sizing: border-box;
+    color: var(--white-color);
+    font-family: 'Inter', sans-serif;
+}
+
+.mission-section {
+    margin-bottom: 40px;
+}
+
+.mission-content1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.mission-text1 p,
+.mission-text3 p{
+    font-size: x-large;
+}
+
+.mission-title{
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.mission-title span{
+    color: var(--lightpurple-color);
+}
+
+.mission-subtitle {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--purple-color);
+    margin-bottom: 20px;
+}
+
+.mission-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mission-list li {
+    font-size: x-large;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.mission-list li span{
+    text-transform: uppercase;
+}
+
+.mission-content1 img {
+    max-width: 820px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.mission-content2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.mission-content2 img {
+    max-width: 650px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.mission-subtitle1,
+.mission-subtitle2{
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.mission-subtitle1 span,
+.mission-subtitle2 span{
+    color: var(--lightpurple-color);
+}
+
+.mission-btn{
+    background-color: var(--lightpurple-color);
+    border: none;
+    transition: transform .4s;
+    font-weight: 600;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.mission-btn:active{
+    background-color: var(--purple-color) !important;
+    transform: scale(1.05) !important;
+    font-weight: 600 !important;
+    text-decoration: none;
+}
+
+.mission-btn:hover{
+    background-color: var(--purple-color); 
+    transform: scale(1.05);
+    font-weight: 600;
+    text-decoration: none;
+}
