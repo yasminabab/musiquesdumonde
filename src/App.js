@@ -13,6 +13,7 @@ import Connexion from './components/connexion.js';
 import Creation from './components/creation.js';
 import Karaoke from './components/karaoke.js';
 import Result from './components/result.js';
+import { useTranslation } from 'react-i18next';
 
 function App() {
   return (

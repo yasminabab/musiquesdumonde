@@ -15,11 +15,13 @@ body{
 
 .nav-text{
     position: relative;
-    margin-left: 8px;
+    margin-left: 16px;
     display: inline-block;
     font-weight: 500;
     font-size: 18px;
     text-decoration: none;
+    color: var(--white-color);
+    white-space: nowrap;
 }
 
 .logo{
@@ -45,11 +47,12 @@ body{
 .btn-nav-text{
     position: relative;
     margin-left: 12px;
-    display: block;
+    display: inline-block;
     font-weight: 500;
     text-decoration: none;
     color: var(--white-color); 
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .underline{
@@ -93,6 +96,7 @@ body{
     font-weight: 600;
     font-size: 18px;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .create-account-btn:active{
@@ -122,3 +126,24 @@ body{
 .navbar-brand{
     text-decoration: none;
 }
+
+.language-selector{
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: 16px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.globe-icon{
+    font-size: 1.5rem;
+    color: var(--white-color);
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+
