@@ -32,7 +32,7 @@ body{
     max-width: 1320px;
 }
 
-.section1-text{
+.section1-text{ 
     flex: 1;
     padding: 20px;
     color: var(--white-color);
@@ -141,7 +141,7 @@ body{
     grid-template-rows: repeat(3, 1fr);
     padding: 20px 0;
     box-sizing: border-box;
-    max-width: 1300px;
+    max-width: 600px;
 }
 
 .grid-item{
@@ -162,6 +162,10 @@ body{
     transform: scale(1.05);
 }
 
+.section2-text{
+    font-size: 1em;
+}
+
 .section2-text h2,
 .section4-text,
 .section5-text{
@@ -174,7 +178,7 @@ body{
 }
 
 .section3-text{
-    font-size: 1.8em;
+    font-size: 2.5em;
     font-weight: bold;
     font-family: 'Inter', sans-serif;
     line-height: 1.1;
@@ -205,14 +209,15 @@ body{
 .sectiom3 h1{
     color: var(--white-color);
     font-family: 'Inter', sans-serif;
-    font-size: 1.02em;
+    font-size: 1.1em;
     line-height: 1.6;
     margin-top: 10px;
     margin-bottom: 20px;
     max-width: 90%;
 }
 
-.underlined-text{
+.underlined-text,
+.korean-highlight{
     display: inline;
     text-transform: uppercase;
     text-decoration: underline;
@@ -232,7 +237,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     list-style: none;
-    padding: 20;
+    padding: 20px;
 }
 
 .features li{
@@ -243,16 +248,19 @@ body{
     margin: 20px;
     padding: 20px;
     position: relative;
-    padding-left: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.features li[dir="rtl"]{
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 .features li::before{
     content: counter(feature-counter);
     counter-increment: item;
-    position: absolute;
-    top: 50%;
-    left: -20px;
-    transform: translateY(-50%);
     background: var(--purple-color);
     color: var(--white-color);
     width: 60px;
@@ -263,6 +271,11 @@ body{
     align-items: center;
     font-size: 1.5em;
     font-weight: bold;
+    margin-right: 20px;
+}
+
+.features li[dir="rtl"]::before{
+    margin-right: 0;
 }
 
 .sectiom5{
@@ -346,3 +359,4 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+

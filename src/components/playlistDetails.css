@@ -16,7 +16,6 @@ body{
 }
 
 .playlist-details{
-    perspective: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;

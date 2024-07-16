@@ -7,6 +7,7 @@ import './header.css';
 import { useTranslation } from 'react-i18next';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 import { CiGlobe } from "react-icons/ci";
+import { useEffect } from 'react';
 
 export default function AppHeader(){
 
@@ -18,6 +19,10 @@ export default function AppHeader(){
     const changeLanguage = (lng) => {
       i18n.changeLanguage(lng);
     };
+
+    useEffect(() => {
+      document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+    },[i18n.language]);
 
     return (
         <Navbar expand="lg" className="">
@@ -42,6 +47,9 @@ export default function AppHeader(){
                 >
                   <Dropdown.Item onClick={() => changeLanguage('fr')} className='dropdown-item'>FR</Dropdown.Item>
                   <Dropdown.Item onClick={() => changeLanguage('en')} className='dropdown-item'>EN</Dropdown.Item>
+                  <Dropdown.Item onClick={() => changeLanguage('es')} className='dropdown-item'>ES</Dropdown.Item>
+                  <Dropdown.Item onClick={() => changeLanguage('ar')} className='dropdown-item'>AR</Dropdown.Item>
+                  <Dropdown.Item onClick={() => changeLanguage('kr')} className='dropdown-item'>KR</Dropdown.Item>
                 </DropdownButton>                
               </Nav>
             </Navbar.Collapse>

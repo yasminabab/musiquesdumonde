@@ -2,6 +2,9 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import enTranslation from '../locales/en/en.json';
 import frTranslation from '../locales/fr/fr.json';
+import esTranslation from '../locales/es/es.json';
+import arTranslation from '../locales/ar/ar.json';
+import krTranslation from '../locales/kr/kr.json';
 
 // the translations
 // (tip move them in a JSON file and import them,
@@ -12,6 +15,18 @@ const resources = {
   },
   fr: {
     translation: frTranslation,
+  },
+  en: {
+    translation: enTranslation,
+  },
+  es: {
+    translation: esTranslation,
+  },
+  ar: {
+    translation: arTranslation,
+  },
+  kr: {
+    translation: krTranslation,
   }
 };
 
@@ -22,7 +37,7 @@ i18n
     fallbackLng: "fr",
     returnObjects: true,
     resources,
-    lng: "fr", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
+    lng: "ar", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
     // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
     // if you're using a language detector, do not define the lng option
 
