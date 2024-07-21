@@ -5,14 +5,18 @@ import { FaTiktok } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import './footer.css';
+import { useTranslation } from 'react-i18next';
 
 function AppFooter(){
+
+    const {t, i18n} = useTranslation()
+
     return(
         <div className="body">
             <footer className='footer'>
                 <div className='footer-content'>
                     <div className='footer-column'>
-                        <p>&copy; {new Date().getFullYear()} Musiques du Monde. Tous droits réservés.</p>
+                        <p>&copy; {new Date().getFullYear()} Musiques du Monde. {t('tous-droits-reserves')}</p>
                     </div>
                     <div className='footer-column social-media'>
                         <ul className='social-media-list'>

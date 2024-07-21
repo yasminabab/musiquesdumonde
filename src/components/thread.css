@@ -50,3 +50,33 @@
     resize: vertical;
     margin-bottom: 10px;
   }
+
+.popover-title{
+  font-size: 20px;
+}
+
+.popover-text{
+  font-size: 20px;
+}
+
+.yes-btn{
+  border: none;
+  background-color: var(--lightpurple-color);
+}
+
+.yes-btn:active,
+.yes-btn:focus,
+.yes-btn:hover{
+  background-color: var(--purple-color) !important;
+}
+
+.no-btn{
+  border: none;
+  background-color: var(--lightblue-color);
+}
+
+.no-btn:active,
+.no-btn:focus,
+.no-btn:hover{
+  background-color: var(--blue-color) !important;
+}

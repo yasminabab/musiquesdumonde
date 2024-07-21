@@ -1,4 +1,4 @@
-import './breadcrumb.css';
+import "./breadcrumb.css"
 import { Link } from 'react-router-dom';
 
 const Breadcrumb = ({ paths }) => {

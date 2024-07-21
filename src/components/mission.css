@@ -122,3 +122,11 @@
     font-weight: 600;
     text-decoration: none;
 }
+
+.korean-highlight-mission-1{
+    color: var(--white-color) !important;   
+}
+
+.korean-highlight-mission-2{
+    color: var(--lightpurple-color);   
+}

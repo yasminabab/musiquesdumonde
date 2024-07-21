@@ -2,5 +2,10 @@
     "i18n-ally.keystyle": "flat",
     "i18n-ally.localesPaths": [
         "src/locales"
-    ]
+    ],
+    "i18n-ally.extract.ignoredByFiles": {
+        "src\\components\\hero.js": [
+            "Pansori performance with a singer and a drummer in traditional Korean attire on stage."
+        ]
+    }
 }

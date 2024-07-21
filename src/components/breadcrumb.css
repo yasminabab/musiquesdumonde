@@ -25,10 +25,26 @@
 .breadcrumb-item a{
     color: var(--white-color);
     text-decoration: none;
+    position: relative;
+}
+
+.breadcrumb-item a:hover::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: var(--white-color);
+}
+
+.breadcrumb-item a:hover::after{
+    background: var(--lightblue-color);
 }
 
 .breadcrumb-item a:hover{
-    text-decoration: underline;
+    color: var(--lightblue-color);
+    text-decoration: none;
 }
 
 .breadcrumb-item.active{

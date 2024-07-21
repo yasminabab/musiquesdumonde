@@ -5,6 +5,7 @@
     --lightpurple-color: #800160dc;
     --blue-color: #006568;
     --lightblue-color: #03888d;
+    --lighterblue-color: #9fdadc;
     --grey-color: #7D7E80;
     --background-color: #0A0C10;
 }
@@ -19,8 +20,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
     position: relative;
     padding: 20px;
 }
@@ -50,12 +49,12 @@ body{
     max-width: 400px;
     max-height: 100%;
     z-index: 3;
-    overflow-y: auto;
 }
 
 .creation-form h2{
     text-align: center;
     margin-bottom: 20px;
+    font-size: 30px;
 }
 
 .creation-form .form-control,
@@ -96,25 +95,160 @@ body{
     cursor: pointer;
 }
 
-.creation-btn{
+.btn-prev{
     background-color: var(--lightblue-color);
     border: none;
     transition: transform .4s;
     font-size: 20px;
+    margin-top: 10px;
 }
 
-.creation-btn:active{
+.btn-prev:active{
     background-color: var(--blue-color) !important;
     transform: scale(1.05) !important;
 }
 
-.creation-btn:hover{
+.btn-prev:hover{
     background-color: var(--blue-color); 
     transform: scale(1.05);
     gap: 20px;
 }
 
+.btn-next,
+.btn-submit{
+    background-color: var(--lightpurple-color);
+    border: none;
+    transition: transform .4s;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.btn-next:active,
+.btn-submit:active{
+    background-color: var(--purple-color) !important;
+    transform: scale(1.05) !important;
+}
+
+.btn-next:hover,
+.btn-submit:hover{
+    background-color: var(--purple-color); 
+    transform: scale(1.05);
+    gap: 20px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .name-inputs-container{
     display: flex;
     gap: 5px;
+}
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    content: "✔";
+    margin-right: 10px;
+}
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    content: "✖";
+    margin-right: 10px;
+}
+
+.step-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step{
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.step .circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--lighterblue-color);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+.step.completed .circle{
+    background-color: var(--blue-color);
+}
+
+.step .label{
+    margin-top: 10px;
+    color: var(--blue-color);
+}
+
+.step .label.inactive{
+   color: var(--lightblue-color);
+}
+
+.step .line{
+    height: 2px;
+    background-color: var(--lighterblue-color);
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    right: -50%;
+    z-index: -1;
+}
+
+.step-container .line.first.completed,
+.step-container .line.second.completed{
+    background-color: var(--blue-color);
+}
+
+.custom-h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-modal{
+    background-color: var(--lightpurple-color);
+    border: none;
+    transition: transform .4s;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.btn-modal:active{
+    background-color: var(--purple-color) !important;
+    transform: scale(1.05) !important;
+}
+
+.btn-modal:hover{
+    background-color: var(--purple-color); 
+    transform: scale(1.05);
+    gap: 20px;
+}
+
+.modal-body{
+    font-size: 20px;
+}
+
+.form-control.is-invalid{
+    background-image: none;
 }

@@ -42,8 +42,8 @@
 
 .message-likes{
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 5px;
+    right: 5px;
     display: flex;
     align-items: center;
 }
@@ -56,3 +56,9 @@
 .new-message{
     color: var(--white-color);
 }
+
+.liked-icon,
+.unliked-icon{
+    color: var(--lightpurple-color);
+}
+

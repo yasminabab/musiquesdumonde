@@ -13,9 +13,17 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(10, 12, 16, 0.8);
+}
+
 .nav-text{
     position: relative;
-    margin-left: 16px;
     display: inline-block;
     font-weight: 500;
     font-size: 18px;
@@ -51,7 +59,6 @@ body{
     font-weight: 500;
     text-decoration: none;
     color: var(--white-color); 
-    text-decoration: none;
     white-space: nowrap;
 }
 
@@ -67,6 +74,7 @@ body{
 .underline::before{
     content: '';
     position: absolute;
+    text-decoration: none;
     bottom: 0;
     left: 0;
     width: 0;
@@ -131,8 +139,8 @@ body{
     background: none;
     border: none;
     padding: 0;
-    margin-left: 16px;
-    margin-top: 5px;
+    margin-left: 8px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
 }
@@ -146,4 +154,24 @@ body{
     align-items: center;
 }
 
+.dropdown-button{
+  background-color: var(--lightblue-color);
+  border: none;
+}
 
+.dropdown-button:active,
+.dropdown-button:hover,
+.dropdown-button:focus{
+  background-color: var(--blue-color);
+  border: none;
+}
+
+@media (max-width: 991.98px){
+    .navbar-toggler{
+        border-color: var(--white-color);
+    }
+
+    .navbar-toggler-icon{
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+}

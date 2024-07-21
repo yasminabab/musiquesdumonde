@@ -1,27 +1,27 @@
 const Data = [
     {
-        category: "Discussions générales",
+        category: "discussions-generales-0",
         threads:[
-            {title: "Règles générales", subjects: 10, messages: 0, lastMessage: "Le 20/01/2014 par admin", id: 1},
-            {title: "FAQ - Questions les plus posées", subjects: 22, messages: 4, lastMessage: "Le 29/08/2019 par admin", id: 2},
-            {title: "Annonces et actualités du site ", subjects: 200, messages: 1000, lastMessage: "Le 01/07/2024 par admin", id: 3},
-            {title: "Problèmes - Bugs - Améliorations", subjects: 600, messages: 2500, lastMessage: "Le 28/04/2024 par admin", id: 4},            
+            {title: "regles-generales", subjects: 10, messages: 0, lastMessage: "2014-01-20T10:00:00", id: 1},
+            {title: "faq-questions-les-plus-posees", subjects: 22, messages: 4, lastMessage: "2019-08-29T09:25:17", id: 2},
+            {title: "annonces-et-actualites-du-site", subjects: 200, messages: 1000, lastMessage: "2024-07-01T08:28:18", id: 3},
+            {title: "problemes-bugs-ameliorations", subjects: 600, messages: 2500, lastMessage: "2024-04-28T17:52:43", id: 4 },
         ]
     },
     {
-        category: "Discussions musicales",
+        category: "discussions-musicales",
         threads:[
-            {title: "Nouveautés et sorties", subjects: 12738, messages: 65489, lastMessage: "Le 22/06/2024 par musiclover", id: 5},
-            {title: "Critiques et recommandations", subjects: 20456, messages: 265789, lastMessage: "Le 22/06/2024 par flamencodancer", id: 6},
-            {title: "Culture et histoire", subjects: 5614, messages: 8954, lastMessage: "Le 21/06/2024 par worldmusicfan", id: 7},
+            {title: "nouveautes-et-sorties", subjects: 12738, messages: 65489, lastMessage: "2024-07-20T12:53:48", id: 5},
+            {title: "critiques-et-recommandations", subjects: 20456, messages: 265789, lastMessage: "2024-07-20T19:44:27", id: 6},
+            {title: "culture-et-histoire", subjects: 5614, messages: 8954, lastMessage: "2024-07-19T14:09:38", id: 7},
         ]
     },
     {
-        category: "Divers",
+        category: "divers",
         threads:[
-            {title: "Festivals et Concerts", subjects: 10, messages: 0, lastMessage: "Le 22/06/2024 par soundseeker", id: 8},
-            {title: "Partage de créations", subjects: 22, messages: 4, lastMessage: "Le 25/05/2024 par r&blover", id: 9},
-            {title: "Discussions hors-sujet", subjects: 200, messages: 1000, lastMessage: "Le 15/06/2024 par tunewanderer", id: 10},
+            {title: "festivals-et-concerts", subjects: 10, messages: 0, lastMessage: "2024-07-20T01:54:12", id: 8},
+            {title: "partage-de-creations", subjects: 22, messages: 4, lastMessage: "2024-06-28T06:45:02", id: 9},
+            {title: "discussions-hors-sujet", subjects: 200, messages: 1000, lastMessage: "2024-07-16T16:21:02", id: 10},
         ]
     }
 ];

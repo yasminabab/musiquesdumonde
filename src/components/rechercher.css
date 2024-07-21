@@ -69,6 +69,7 @@ body{
 
 .results{
   flex: 3;
+  position: relative;
 }
 
 .results-header{
@@ -76,6 +77,26 @@ body{
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.results-header .left,
+.results-header .center,
+.results-header .right{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-header .left{
+  justify-content: flex-start;
+}
+
+.results-header .right{
+  justify-content: flex-end;
 }
 
 .results-header .pagination button,
@@ -95,14 +116,12 @@ body{
 }
 
 .music-list{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 .music-card{
-  flex: 1 1 calc(33.333333% - 20px);
-  margin-bottom: 20px;
   background-color: var(--white-color);
   border: none;
   border-radius: 8px;
@@ -173,4 +192,44 @@ body{
   color: var(--white-color);
   font-size: x-large;
   margin-top: 20px;
+}
+
+.pagination{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.pagination li{
+  margin: 0 5px;
+}
+
+.pagination li a{
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--white-color);
+  background-color: var(--lightblue-color);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination li a:hover{
+  background-color: var(--blue-color);
+}
+
+.pagination li a:active{
+  background-color: var(--blue-color) !important;
+}
+
+.pagination li.active a{
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}
+
+.pagination li.disabled a{
+  background-color: var(--grey-color);
+  color: var(--black-color);
+  pointer-events: none;
+  cursor: default;
 }

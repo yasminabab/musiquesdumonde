@@ -1,0 +1,108 @@
+:root{
+    --black-color: #000;
+    --white-color: #ffffff;
+    --purple-color: #600148;
+    --lightpurple-color: #800160dc;
+    --blue-color: #006568;
+    --lightblue-color: #03888d;
+    --grey-color: #7D7E80;
+    --background-color: #0A0C10;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mdp-oublié-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
+}
+
+.background-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.creation-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 1, 96, 0.8);
+    z-index: 2;
+}
+
+.mdp-oublié-form{
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 100%;
+    z-index: 3;
+}
+
+.mdp-oublié-form p{
+    text-align: center;
+}
+
+.mdp-oublié-title{
+    text-align: center !important;
+    margin-bottom: 50px;
+    font-size: 24px;
+    color: var(--purple-color);
+}
+
+.mdp-oublié-custom-h3{
+    font-size: 20px;
+}
+
+.mdp-oublié-custom-strong{
+    font-size: larger;
+    word-wrap: break-word;
+}
+
+.confirm-btn{
+    border: none;
+    background-color: var(--lightpurple-color);
+}
+
+.confirm-btn{
+    background-color: var(--lightpurple-color);
+}
+
+.confirm-btn:hover,
+.confirm-btn:focus,
+.confirm-btn:active{
+    background-color: var(--purple-color) !important;
+}
+
+.cancel-btn{
+    border: none;
+    background-color: var(--lightblue-color);
+}
+
+.cancel-btn:hover,
+.cancel-btn:focus,
+.cancel-btn:active{
+    background-color: var(--blue-color) !important;
+}
+
+.modal-title{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-body{
+    word-wrap: break-word;
+}

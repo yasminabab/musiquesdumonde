@@ -20,10 +20,6 @@ export default function AppHeader(){
       i18n.changeLanguage(lng);
     };
 
-    useEffect(() => {
-      document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
-    },[i18n.language]);
-
     return (
         <Navbar expand="lg" className="">
           <Container>
@@ -37,6 +33,7 @@ export default function AppHeader(){
                 <Nav.Link as={Link} to="/forum" className={`nav-text ${pathname === '/forum' ? 'active' : ''}`}><span className="underline">{t('forum')}</span></Nav.Link>
                 <Nav.Link as={Link} to="/playlist" className={`nav-text ${pathname === '/playlist' ? 'active' : ''}`}><span className="underline">{t('mes-playlists')}</span></Nav.Link>
                 <Nav.Link as={Link} to="/karaoke" className={`nav-text ${pathname === '/karaoke' ? 'active' : ''}`}><span className="underline">{t('karaoke')}</span></Nav.Link>
+                <Nav.Link as={Link} to="/faq" className={`nav-text ${pathname === '/faq' ? 'active' : ''}`}><span className="underline">FAQ</span></Nav.Link>
               </Nav>
               <Nav className="mr-auto align-items-center">
                 <Nav.Link as={Link} to="/connexion" className={`nav-text ${pathname === '/connexion' ? 'active' : ''}`}><span className="underline">{t('se-connecter')}</span></Nav.Link>
@@ -48,8 +45,7 @@ export default function AppHeader(){
                   <Dropdown.Item onClick={() => changeLanguage('fr')} className='dropdown-item'>FR</Dropdown.Item>
                   <Dropdown.Item onClick={() => changeLanguage('en')} className='dropdown-item'>EN</Dropdown.Item>
                   <Dropdown.Item onClick={() => changeLanguage('es')} className='dropdown-item'>ES</Dropdown.Item>
-                  <Dropdown.Item onClick={() => changeLanguage('ar')} className='dropdown-item'>AR</Dropdown.Item>
-                  <Dropdown.Item onClick={() => changeLanguage('kr')} className='dropdown-item'>KR</Dropdown.Item>
+                  <Dropdown.Item onClick={() => changeLanguage('ko')} className='dropdown-item'>KR</Dropdown.Item>
                 </DropdownButton>                
               </Nav>
             </Navbar.Collapse>

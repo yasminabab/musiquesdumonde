@@ -1,9 +1,10 @@
 import './result.css';
 import { useState, useEffect } from 'react';
-import { ButtonToolbar } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Result = () => {
+    const {t, i18n} = useTranslation();
     const location = useLocation();
     const navigate = useNavigate();
     const { recordedBlob } = location.state || {};
@@ -25,23 +26,23 @@ const Result = () => {
             const url = URL.createObjectURL(recordedBlob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'enregistrement.wav';
+            a.download = 'recording.wav';
             a.click();
             URL.revokeObjectURL(url);
         }
     };
 
     if(!recordedBlob) {
-        return <div>Pas d'enregistrement. Retournez à la page précédente et enregistrez quelque chose.</div>
+        return <div>{t('pas-denregistrement-retournez-a-la-page-precedente-et-enregistrez-quelque-chose')}</div>
     }
 
     return (
         <div className='result-page' style={{ textAlign: "center" }}>
-            <h1>Votre Enregistrement</h1>
+            <h1>{t('votre-enregistrement')}</h1>
             {audioUrl && <audio src={audioUrl} controls />}
-            <button onClick={downloadRecording}>Télécharger l'enregistrement</button>
-            <h2>Votre score: 100 <br /> Félicitations!</h2>
-            <button onClick={() => navigate(-1)}>Réessayer</button>
+            <button className='download-btn' onClick={downloadRecording}>{t('telecharger-lenregistrement')}</button>
+            <h2>{t('votre-score-100')} <br /> {t('felicitations')}</h2>
+            <button className='retry-btn' onClick={() => navigate(-1)}>{t('reessayer')}</button>
         </div>
     );
 };

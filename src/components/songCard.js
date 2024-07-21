@@ -1,8 +1,10 @@
 import './songCard.css';
 import { useEffect, useReducer, useRef, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
 
 const SongCard = ({ song, isActive, onPlay, onPause, onPrevious, onNext, isPlaying, onEnded }) => {
+    const {t, i18n} = useTranslation();
     const audioRef = useRef(null);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
@@ -102,7 +104,7 @@ const SongCard = ({ song, isActive, onPlay, onPause, onPrevious, onNext, isPlayi
                     </div>
                     <div className='btn-controls'>
                         <Button className='previous-btn' onClick={onPrevious}>&lt;&lt;</Button>
-                        <Button className='playpause-btn' onClick={handlePlayPause}>{isPlaying ? 'Pause' : 'Play'}</Button>
+                        <Button className='playpause-btn' onClick={handlePlayPause}>{isPlaying ? t('pause-0') : t('play')}</Button>
                         <Button className='next-btn' onClick={onNext}>&gt;&gt;</Button>
                     </div>
                 </Card.Body>

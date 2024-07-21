@@ -82,7 +82,7 @@ body{
     max-width: 90%;
 }
 
-.button-container{
+.button-container-section1{
     display: flex;
     gap: 8px;
 }
@@ -92,7 +92,7 @@ body{
     border: none;
     transition: transform .4s;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 25px;
     text-decoration: none;
 }
 
@@ -233,9 +233,9 @@ body{
 
 .features{
     counter-reset: feature-counter;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;  
     list-style: none;
     padding: 20px;
 }
@@ -243,19 +243,12 @@ body{
 .features li{
     counter-increment: feature-counter;
     color: var(--white-color);
-    flex: 1 1 30%;
     font-size: 25px;
-    margin: 20px;
     padding: 20px;
     position: relative;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-}
-
-.features li[dir="rtl"]{
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    white-space: nowrap;
 }
 
 .features li::before{
@@ -263,8 +256,8 @@ body{
     counter-increment: item;
     background: var(--purple-color);
     color: var(--white-color);
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -272,10 +265,6 @@ body{
     font-size: 1.5em;
     font-weight: bold;
     margin-right: 20px;
-}
-
-.features li[dir="rtl"]::before{
-    margin-right: 0;
 }
 
 .sectiom5{
@@ -358,5 +347,29 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.feature-btn{
+    background-color: var(--lightpurple-color);
+    border: none;
+    transition: transform .4s;
+    font-size: 20px;
+    margin-left: 30px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.feature-btn:active{
+    background-color: var(--purple-color) !important;
+    transform: scale(1.05) !important;
+    font-weight: 600 !important;
+    text-decoration: none;
+}
+
+.feature-btn:hover{
+    background-color: var(--purple-color); 
+    transform: scale(1.05);
+    font-weight: 600;
+    text-decoration: none;
 }
 

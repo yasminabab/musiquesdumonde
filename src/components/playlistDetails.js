@@ -19,9 +19,11 @@ import songcover12 from '../assets/song-cover12.jpg';
 import songcover13 from '../assets/song-cover13.jpg';
 import songcover14 from '../assets/song-cover14.jpg';
 import songcover15 from '../assets/song-cover15.jpg';
+import { useTranslation } from 'react-i18next';
 
 
 const PlaylistDetails = () => {
+    const {t, i18n} = useTranslation();
     const [activeSongIndex, setActiveSongIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
     const { id } = useParams();
@@ -74,10 +76,10 @@ const PlaylistDetails = () => {
     return (
         <Container className='playlist-details mt-4'>
             <Link to="/playlist">
-                <Button className="backplaylist-btn mb-4">Retour aux Playlists</Button>
+                <Button className="backplaylist-btn mb-4">{t('retour-aux-playlists')}</Button>
             </Link>  
             <div className='playlist-details-container'>
-                <h1><span className='span-playlist'>Ma Playlist</span></h1>
+                <h1><span className='span-playlist'>{t('ma-playlist')}</span></h1>
                 <div className='song-carousel'>
                     {songs.map((song, index) => (
                         <div
